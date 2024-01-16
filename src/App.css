@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f7;
+    color: #333;
+    line-height: 1.6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-outer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    background-color: #007bff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-header:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.App-link {
-  color: #61dafb;
+.inner-top-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inner-top-button button{
+    width: 100px;
+
+}
+/* Input Bar Styles */
+.inner-top-input input {
+    width: 80%;
+    max-width: 400px;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.inner-top-input input:focus {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color:green;
+}
+
+
+
+
+/* Table Styles */
+#todoTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#todoTable thead {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+#todoTable th, #todoTable td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+#todoTable td  .delete:hover{
+    background-color: red;
+}
+
+#todoTable tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+#todoTable tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+#todoTable .status-column {
+    width: 80px;
+    text-align: center;
+}
+.status-pending {
+    color: #dc3545;
+}
+
+.status-completed {
+    color: #28a745;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .app-outer {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .inner-top-input  button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .inner-top-input input {
+        width: 90%;
+        margin-bottom: 10px;
+    }
 }
